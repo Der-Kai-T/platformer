@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=4 uid="uid://vc2sou8spf23"]
+
+[ext_resource type="Script" uid="uid://chxfrr7x0cuxa" path="res://Scenes/Level01.cs" id="1_s7ctl"]
+[ext_resource type="TileSet" uid="uid://dfom3tkkokrq" path="res://Tiles/MossyCavern.tres" id="2_s7ctl"]
+[ext_resource type="PackedScene" uid="uid://pdfvpaqg4wcw" path="res://Scenes/Player.tscn" id="3_pkws4"]
+
+[node name="Level01" type="Node2D"]
+script = ExtResource("1_s7ctl")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAAAAEAAQABAAAAAAABAAEAAQABAAAAAAACAAEAAQABAAAAAAD//wEAAQABAAAAAAD9//7/AQABAAIAAAD+//7/AQABAAIAAAD///7/AQABAAIAAAAAAP7/AQABAAIAAAABAP7/AQABAAIAAAACAP7/AQABAAIAAAADAAEAAQACAAAAAAADAAIAAQAEAAEAAAAEAAIAAQABAAAAAAAFAAIAAQABAAAAAAAGAAIAAQAFAAEAAAAGAAEAAQAAAAEAAAAGAAAAAQAAAAEAAAAGAP//AQAAAAAAAAAHAP//AQABAAAAAAAIAP//AQABAAAAAAAJAP//AQABAAAAAAAKAP//AQABAAAAAAADAP7/AQACAAIAAAADAP3/AQACAAEAAAADAPz/AQACAAEAAAADAPv/AQACAAEAAAAGAP3/AQAAAAIAAAAGAPz/AQAAAAAAAAAHAPz/AQABAAAAAAAIAPz/AQABAAAAAAAJAPz/AQABAAAAAAAKAPz/AQABAAAAAAAHAP3/AQABAAIAAAAIAP3/AQABAAIAAAAJAP3/AQABAAIAAAAKAP3/AQABAAIAAAA=")
+tile_set = ExtResource("2_s7ctl")
+
+[node name="Player" parent="." instance=ExtResource("3_pkws4")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_enabled = true
+
+[node name="OnWall" type="ColorRect" parent="Player/Camera2D"]
+offset_left = -125.0
+offset_top = -194.0
+offset_right = -85.0
+offset_bottom = -154.0
+
+[node name="OnFloor" type="ColorRect" parent="Player/Camera2D"]
+offset_left = -125.0
+offset_top = -145.0
+offset_right = -85.0
+offset_bottom = -105.0
+
+[node name="Velocity" type="Label" parent="Player/Camera2D"]
+offset_left = -77.0
+offset_top = -205.0
+offset_right = 37.0
+offset_bottom = -163.0
+theme_override_font_sizes/font_size = 30
+text = "Velocity"
+
+[node name="Position" type="Label" parent="Player/Camera2D"]
+offset_left = -73.0
+offset_top = -156.0
+offset_right = -10.0
+offset_bottom = -133.0
+text = "Position"
+
+[node name="Animation" type="Label" parent="Player/Camera2D"]
+offset_left = -126.0
+offset_top = -228.0
+offset_right = -63.0
+offset_bottom = -205.0
+text = "Position"

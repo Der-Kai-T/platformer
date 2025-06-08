@@ -1,5 +1,5 @@
 # platformer
-Yes, there is a t missing. It was late at night, when I had the idea to learn [Godot](https://godotengine.org/) with .NET-Support.
+It was late at night, when I had the idea to learn [Godot](https://godotengine.org/) with .NET-Support.
 
 This isn't about copying a complete tutorial, but rather figuring stuff out. Of course I'm using online resources as tutorials, videos and documentation.
 

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://pdfvpaqg4wcw"]
+
+[ext_resource type="Script" uid="uid://b2265gxgje6es" path="res://Scenes/Player.cs" id="1_kyqiw"]
+[ext_resource type="SpriteFrames" uid="uid://deumgn25s3r2i" path="res://Sprites/player.tres" id="1_rpqav"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kyqiw"]
+radius = 58.0
+height = 222.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kyqiw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_rpqav")
+animation = &"IDLE"
+autoplay = "IDLE"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 36)
+shape = SubResource("CapsuleShape2D_kyqiw")
